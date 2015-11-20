@@ -1,0 +1,19 @@
+{
+  "name": "reflux-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.1.18",
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "react": "^0.14.3",
+    "reflux": "^0.3.0",
+    "webpack": "^1.12.6"
+  }
+}
