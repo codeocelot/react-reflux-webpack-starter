@@ -45,7 +45,7 @@ export default class RefluxApp extends React.Component{
       <section>
         <h2>Some Reflux Actions</h2>
         <label htmlFor="input">Enter some text to add to store</label>
-        <input type="text" ref="userInput" name="input" onChange={this.checkValidInput}></input>
+        <input type="text" ref="userInput" name="input" onChange={this.checkValidInput} className="user-input"></input>
         <button type="button" onClick={this.handleAdd}>Submit</button>
         <span className={classNames({'error':!!this.state.error},'error-display')}>{this.state.error}</span>
         <ul>
