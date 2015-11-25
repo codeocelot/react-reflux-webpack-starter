@@ -1,0 +1,15 @@
+body{
+  // font-size:larger;
+}
+
+li{
+  line-height:25px;
+}
+
+li:nth-child(2n){
+  background-color: #C0C0C0;
+}
+
+button.btn-rm{
+  float:right;
+}

@@ -1,5 +1,8 @@
 module.exports = {
-	entry:'./js/index.js',
+	entry:[
+		'./js/index.js',
+		'./style/style.scss'
+	],
 	output:{
 		filename:'./dist/index.js',
 	},
