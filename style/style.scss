@@ -13,3 +13,10 @@ li:nth-child(2n){
 button.btn-rm{
   float:right;
 }
+
+span.error-display{
+  display:none;
+}
+span.error-display.error{
+  display:inline;
+}

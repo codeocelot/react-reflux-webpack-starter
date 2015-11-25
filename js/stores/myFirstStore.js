@@ -9,10 +9,15 @@ export default Reflux.createStore({
     this.listenToMany(myActions);
   },
   onAdd(obj){
+    if(!obj.content){
+      this.error = 'Cannot add empty string'
+      this.trigger(this.error);
+      return;
+    }
     obj.id = this.currId++;
     this.objs.push(obj);
     // trigger an update
-    this.trigger(this.objs)
+    this.trigger(null,this.objs)
   },
   onRemove(id){
     this.objs = _.without(
@@ -22,6 +27,6 @@ export default Reflux.createStore({
         {id}
       )
     );
-    this.trigger(this.objs);
+    this.trigger(null,this.objs);
   }
 })
