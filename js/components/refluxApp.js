@@ -6,16 +6,9 @@ import React from 'react'
 export default class RefluxApp extends React.Component{
   constructor(props){
     super(props);
-    console.log(this);
     this.handleAdd = this.handleAdd.bind(this);
-    // this.setState({items:[]})
     this.state = {items:[]}
   }
-  // getInitialState(){
-  //   this.setState({
-  //     items:[]
-  //   })
-  // }
   componentDidMount(){
     myStore.listen(items =>{this.setState({items})})
   }

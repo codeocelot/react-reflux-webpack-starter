@@ -1,17 +1,7 @@
 import React from 'react'
-import Reflux from 'reflux'
 import RefluxApp from './refluxApp'
-// import myActions from '../actions/myFirstActions'
-// import myStore = from '../store/myFirstStore'
 
 export default class App extends React.Component{
-  constructor(props){
-    super(props);
-    // extend this as necessary
-  }
-  componentDidMount(){
-
-  }
   render(){
     return(
       <div>
