@@ -1,5 +1,5 @@
 # react-webpack-starter
-A no-frills get started now package for those interested in React, Reflux, ES6 & Webkit.
+A no-frills get started now package for those interested in React, Reflux, ES6 & Webpack.
 
 ## What this is:
 It's a demonstration of
