@@ -6,7 +6,7 @@ export default class App extends React.Component{
     return(
       <div>
         <h1>Hi world</h1>
-        <h3>If you see this, ready to get started with React + Reflux + Webpack :)</h3>
+        <h3>If you see this, you're ready to get started with React + Reflux + Webpack :)</h3>
         <h4>Have you read the <a href="https://github.com/codeocelot/react-reflux-webpack-starter/">Read me</a> yet?</h4>
 
         <RefluxApp/>
