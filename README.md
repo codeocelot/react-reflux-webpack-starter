@@ -1,4 +1,4 @@
-# react-webpack-starter
+# react-reflux-webpack-starter
 A no-frills get started now package for those interested in React, Reflux, ES6 & Webpack.
 
 ## What this is:
