@@ -1,14 +1,15 @@
 var webpack = require('webpack')
 module.exports = {
-	entry: {
-		app:
-			[
+	devtool:'eval',
+	entry: [
+		// app:
+			// [
 				'./js/index.js',
 				'./style/style.scss'
-			]
-	},
+			// ]
+	],
 	output:{
-		filename:'[name]_wp_bundle.js',
+		filename:'bundle.js',
 		path:__dirname + '/dist',
 		publicPath: 'http://localhost:8080/dist/'
 		// filename:'./dist/index.js',
@@ -26,14 +27,14 @@ module.exports = {
 				exclude:/node_modules/,
 				loader:'babel',
 				query:{
-					presets:['react','es2015']
+					presets:['react','es2015'/*Enable for ES7*/,'stage-0']
 				}
 			},
-			{
-				test:/\.js$/,
-				loader:"eslint-loader",
-				exclude:"/node_modules/"
-			},
+//			{
+//				test:/\.js$/,
+//				loader:"eslint-loader",
+//				exclude:"/node_modules/"
+//			},
 			{
 				test: /\.scss$/,
 				loaders: ["style", "css", "sass"]

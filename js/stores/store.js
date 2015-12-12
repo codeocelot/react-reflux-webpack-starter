@@ -1,12 +1,12 @@
 import Reflux from 'reflux'
-import myActions from '../actions/myFirstActions'
+import actions from '../actions/actions'
 import _ from 'underscore'
 
 export default Reflux.createStore({
   init(){
     this.objs = [];
     this.currId = 0;
-    this.listenToMany(myActions);
+    this.listenToMany(actions);
   },
   onAdd(obj){
     if(!obj.content){

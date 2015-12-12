@@ -1,18 +1,16 @@
 import Reflux from 'reflux'
-import myActions from '../actions/myFirstActions'
-import myStore from '../stores/myFirstStore'
+import actions from '../actions/actions'
+import store from '../stores/store'
 import React from 'react'
 import classNames from 'classnames'
 
 export default class RefluxApp extends React.Component{
   constructor(props){
     super(props);
-    this.handleAdd = this.handleAdd.bind(this);
-    this.checkValidInput = this.checkValidInput.bind(this);
     this.state = {items:[]}
   }
   componentDidMount(){
-    myStore.listen(
+    store.listen(
       (err,items) =>{
         if(err){
           this.setState({error:err})
@@ -21,18 +19,23 @@ export default class RefluxApp extends React.Component{
       }
     )
   }
-  checkValidInput(evt){
+  /*
+    The following methods use 'this'.  As of React .14, components no longer
+    autobind this to methods. If you prefer to use older function declaration syntax,
+    then ensure you bind `this` to each method that uses it.
+  */
+  checkValidInput = (evt) => {
     if(evt.target.value){
       this.setState({error:null})
     }
   }
-  handleAdd(){
+  handleAdd = () => {
     var content = this.refs.userInput.value;
-    myActions.add({content})
+    actions.add({content})
     this.refs.userInput.value = ''
   }
-  handleRemove(id){
-    myActions.remove(id)
+  handleRemove = (id) => {
+    actions.remove(id)
   }
   render(){
     var items = this.state.items.map((item)=>{return(
