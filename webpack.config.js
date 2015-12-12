@@ -2,17 +2,13 @@ var webpack = require('webpack')
 module.exports = {
 	devtool:'eval',
 	entry: [
-		// app:
-			// [
-				'./js/index.js',
-				'./style/style.scss'
-			// ]
+			'./js/index.js',
+			'./style/style.scss'
 	],
 	output:{
 		filename:'bundle.js',
 		path:__dirname + '/dist',
 		publicPath: 'http://localhost:8080/dist/'
-		// filename:'./dist/index.js',
 	},
 	plugins: [
 		// kills the compilation upon an error.
@@ -30,11 +26,13 @@ module.exports = {
 					presets:['react','es2015'/*Enable for ES7*/,'stage-0']
 				}
 			},
-//			{
-//				test:/\.js$/,
-//				loader:"eslint-loader",
-//				exclude:"/node_modules/"
-//			},
+			// NOTE: eslint currently does not accept arrow class methods.
+			// I'll reintroduce eslint as soon as this is patched.
+			// {
+			// 	test:/\.js$/,
+			// 	loader:"eslint-loader",
+			// 	exclude:"/node_modules/"
+			// },
 			{
 				test: /\.scss$/,
 				loaders: ["style", "css", "sass"]
