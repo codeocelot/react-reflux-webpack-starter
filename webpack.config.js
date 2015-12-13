@@ -14,7 +14,6 @@ module.exports = {
 		// kills the compilation upon an error.
 		// this keeps the outputed bundle **always** valid
 		new webpack.NoErrorsPlugin(),
-
 	],
 	module:{
 		loaders:[
@@ -26,13 +25,11 @@ module.exports = {
 					presets:['react','es2015'/*Enable for ES7*/,'stage-0']
 				}
 			},
-			// NOTE: eslint currently does not accept arrow class methods.
-			// I'll reintroduce eslint as soon as this is patched.
-			// {
-			// 	test:/\.js$/,
-			// 	loader:"eslint-loader",
-			// 	exclude:"/node_modules/"
-			// },
+			{
+				test:/\.js$/,
+				loader:"eslint-loader",
+				exclude:"/node_modules/"
+			},
 			{
 				test: /\.scss$/,
 				loaders: ["style", "css", "sass"]
