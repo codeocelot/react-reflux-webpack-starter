@@ -1,4 +1,3 @@
-import Reflux from 'reflux'
 import actions from '../actions/actions'
 import store from '../stores/store'
 import React from 'react'

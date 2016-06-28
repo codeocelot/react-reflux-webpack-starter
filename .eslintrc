@@ -1,6 +1,31 @@
 {
   "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": "eslint:recommended",
   "rules": {
-    "strict": 0
-  }
+    "react/jsx-uses-vars": "error",
+  },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",  // Pragma to use, default to "React"
+      "version": "15.0" // React version, default to the latest React stable release
+    }
+  },
+  "environment":{
+    "browser":true,
+    "node":true,
+    "es6": true,
+    "mocha":true,
+    "shared-node-browser":true,
+  },
+  "globals":{
+    "document":true
+    }
 }
